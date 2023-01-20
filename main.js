@@ -33,27 +33,30 @@ let cur = document.querySelector('.currency');
 }
 
 
+// priceKg.addEventListener('change', (e) => {
+//     let priceperKg = Number(e.target.value);
+//     let price = itemAmount*priceperKg;
+//     priceDiv.innerHTML=price;
+//     })
 
-
-
-{
-    cur.addEventListener('change', (e) => {
+priceKg.addEventListener('change', (e) => {
+    let priceperKg = Number(e.target.value);
+    let price = itemAmount*priceperKg;
+    //priceDiv.innerHTML=price;
+ 
+        cur.addEventListener('change', (e) => {      
+            if(e.target.value == "euro"){
+                newPrice = price*1
+            }else 
+            if(e.target.value == "uah"){
+                newPrice = price*0.025
+            }else if(e.target.value == "gbp"){
+                newPrice = price*0.88
+            }
+            priceDiv.innerHTML=newPrice;
+            console.log(typeof newPrice)
+            console.log(e.target.value)
+        })
         
-        function totalPrice(itemAmount, priceKg){
-            priceKg.addEventListener('change', (e) => {
-                let priceperKg = Number(e.target.value);
-                let price = itemAmount*priceperKg;
-                priceDiv.innerHTML=price;
-                })
-        }
-        totalPrice();
-        if(cur.value="euro"){
-            newPrice = price*1
-        }else if(cur.value="uah"){
-            newPrice = price*0,025
-        }else if(cur.value="gpb"){
-            newPrice = price*0.88
-        }
-        priceDiv.innerHTML=price;
-    } )
-}
+    })
+
