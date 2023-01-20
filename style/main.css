@@ -1,0 +1,40 @@
+.wrapper {
+  margin: 0 auto;
+  width: 600px;
+  height: 600px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.wrapper .item {
+  margin: 0 auto;
+  width: 500px;
+  height: 350px;
+  background-image: url("https://img.freepik.com/free-vector/vector-ripe-yellow-banana-bunch-isolated-white-background_1284-45456.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.wrapper .button-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .button-wrap .amount {
+  color: black;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 5px;
+}
+.wrapper .button-wrap button {
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+  color: black;
+  font-size: 30px;
+  border-color: aquamarine;
+  border-radius: 5px;
+  margin: 3px;
+}
+.wrapper .warning {
+  color: red;
+  font-weight: 700;
+}/*# sourceMappingURL=main.css.map */
